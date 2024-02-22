@@ -32,7 +32,7 @@ public class MoradorController {
         return novoMorador;
     }
 
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{idMorador}")
     public Optional<Morador> deletaMorador (@PathVariable Integer id){
         Optional<Morador> morador = dao.findById(id);
         dao.deleteById(id);

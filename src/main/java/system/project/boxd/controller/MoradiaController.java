@@ -29,7 +29,6 @@ public class MoradiaController {
         Moradia registraMoradia = dao.save(moradia);
         return registraMoradia;
     }
-
     @DeleteMapping("/{idMoradia}")
     public Optional<Moradia> deletaMoradia (@PathVariable Integer id) {
         Optional<Moradia> moradia = dao.findById(id);
